@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1324" />
+  <title>LifeGlass — Personal Self Monitor</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="ambient ambient-c"></div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 2v3M22 12h-3M12 22v-3M2 12h3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><path d="M16 3v4h4M8 11h8M8 15h8"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.1A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.26.37.53.7 1 .9.34.14.7.2 1.1.2h.1v4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 21V9M7 14l5-5 5 5M5 3h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar glass-panel">
+      <div class="brand">
+        <div class="brand-mark">L</div>
+        <div><strong>LifeGlass</strong><span>Self monitor</span></div>
+      </div>
+
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="today"><svg><use href="#i-home"></use></svg><span>Today</span></button>
+        <button class="nav-item" data-view="goals"><svg><use href="#i-target"></use></svg><span>Goals</span></button>
+        <button class="nav-item" data-view="analytics"><svg><use href="#i-chart"></use></svg><span>Analytics</span></button>
+        <button class="nav-item" data-view="journal"><svg><use href="#i-note"></use></svg><span>Journal</span></button>
+        <button class="nav-item" data-view="settings"><svg><use href="#i-settings"></use></svg><span>Settings</span></button>
+      </nav>
+
+      <div class="sidebar-photo">
+        <img src="img/sunrise.jpg" alt="Calm sunrise" />
+        <div><span>Consistency</span><strong id="streakText">0 day streak</strong></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="dateLabel"></p>
+          <h1 id="pageTitle">Today</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><svg><use href="#i-sun"></use></svg></button>
+          <button class="avatar-btn" id="profileButton" aria-label="Profile"><span id="avatarInitial">Y</span></button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-today">
+        <section class="hero glass-panel">
+          <div class="hero-bg"></div>
+          <div class="hero-copy">
+            <span class="pill soft">Daily clarity</span>
+            <h2 id="heroGreeting">Good day.</h2>
+            <p>Focus on direction, not perfection.</p>
+            <div class="hero-metrics">
+              <div><strong id="heroScore">0%</strong><span>day score</span></div>
+              <div><strong id="heroTasks">0/0</strong><span>tasks</span></div>
+              <div><strong id="heroFocus">0h</strong><span>screen</span></div>
+            </div>
+          </div>
+          <div class="score-orbit" aria-label="Daily score">
+            <svg viewBox="0 0 120 120">
+              <circle class="orbit-bg" cx="60" cy="60" r="48"></circle>
+              <circle class="orbit-value" id="scoreRing" cx="60" cy="60" r="48"></circle>
+            </svg>
+            <div><strong id="scoreRingValue">0</strong><span>today</span></div>
+          </div>
+        </section>
+
+        <section class="summary-grid">
+          <article class="metric-card glass-panel">
+            <div class="metric-icon mint"><svg><use href="#i-target"></use></svg></div>
+            <div><span>Goal progress</span><strong id="goalProgressMetric">0%</strong><small id="goalMetricHint">Across active goals</small></div>
+          </article>
+          <article class="metric-card glass-panel">
+            <div class="metric-icon blue"><svg><use href="#i-check"></use></svg></div>
+            <div><span>Task completion</span><strong id="taskProgressMetric">0%</strong><small id="taskMetricHint">0 completed</small></div>
+          </article>
+          <article class="metric-card glass-panel">
+            <div class="metric-icon violet"><svg><use href="#i-spark"></use></svg></div>
+            <div><span>Satisfaction</span><strong id="satisfactionMetric">—</strong><small id="satisfactionMetricHint">Check in below</small></div>
+          </article>
+          <article class="metric-card glass-panel">
+            <div class="metric-icon amber"><svg><use href="#i-clock"></use></svg></div>
+            <div><span>Screen time</span><strong id="screenMetric">0h 00m</strong><small id="screenMetricHint">Target 4h</small></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="glass-panel card tasks-card">
+            <div class="card-head">
+              <div><span class="eyebrow">Execution</span><h3>Today’s tasks</h3></div>
+              <button class="mini-btn" data-open-modal="task"><svg><use href="#i-plus"></use></svg>Add</button>
+            </div>
+            <div id="taskList" class="task-list"></div>
+          </article>
+
+          <article class="glass-panel card checkin-card">
+            <div class="card-head"><div><span class="eyebrow">Check-in</span><h3>How are you doing?</h3></div><span class="status-dot"></span></div>
+            <div class="checkin-row">
+              <label><span>Mood</span><output id="moodValue">7</output></label>
+              <input type="range" min="1" max="10" value="7" id="moodRange" />
+            </div>
+            <div class="checkin-row">
+              <label><span>Satisfaction</span><output id="satisfactionValue">7</output></label>
+              <input type="range" min="1" max="10" value="7" id="satisfactionRange" />
+            </div>
+            <div class="checkin-row">
+              <label><span>Energy</span><output id="energyValue">7</output></label>
+              <input type="range" min="1" max="10" value="7" id="energyRange" />
+            </div>
+            <button class="primary-btn full" id="saveCheckin">Save check-in</button>
+          </article>
+
+          <article class="glass-panel card timeline-card">
+            <div class="card-head">
+              <div><span class="eyebrow">Activity</span><h3>What I did</h3></div>
+              <button class="mini-btn" data-open-modal="activity"><svg><use href="#i-plus"></use></svg>Log</button>
+            </div>
+            <div id="timelineList" class="timeline-list"></div>
+          </article>
+
+          <article class="glass-panel card screen-card">
+            <div class="card-head">
+              <div><span class="eyebrow">Digital balance</span><h3>Screen time</h3></div>
+              <button class="mini-btn" data-open-modal="screen"><svg><use href="#i-plus"></use></svg>Log</button>
+            </div>
+            <div class="screen-layout">
+              <div class="donut" id="screenDonut"><div><strong id="screenDonutValue">0h</strong><span>total</span></div></div>
+              <div id="screenLegend" class="legend-list"></div>
+            </div>
+          </article>
+
+          <article class="glass-panel card insight-card span-2">
+            <div class="insight-photo"><img src="img/journal.jpg" alt="Notebook and pens" /></div>
+            <div class="insight-body">
+              <span class="eyebrow">Pattern detected</span>
+              <h3 id="insightTitle">Your data will become your mirror.</h3>
+              <p id="insightText">Log a few days and LifeGlass will surface useful patterns.</p>
+              <button class="text-btn" data-view-link="analytics">See trends →</button>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="view-goals">
+        <section class="goal-banner glass-panel">
+          <img src="img/sunrise.jpg" alt="Sunrise" />
+          <div><span class="pill soft">Long view</span><h2>Build a life you can measure without reducing it to numbers.</h2><p>Track outcomes, habits and meaning together.</p></div>
+          <button class="primary-btn" data-open-modal="goal"><svg><use href="#i-plus"></use></svg>New goal</button>
+        </section>
+        <div class="section-heading"><div><span class="eyebrow">Active</span><h2>Your goals</h2></div><span id="goalCountLabel"></span></div>
+        <div id="goalGrid" class="goal-grid"></div>
+      </section>
+
+      <section class="view" id="view-analytics">
+        <div class="analytics-head">
+          <div><span class="eyebrow">Review</span><h2>Progress over time</h2></div>
+          <div class="segmented" id="rangeTabs">
+            <button class="active" data-range="week">Week</button><button data-range="month">Month</button><button data-range="year">Year</button>
+          </div>
+        </div>
+
+        <section class="analytics-grid">
+          <article class="glass-panel chart-card span-2">
+            <div class="card-head"><div><span class="eyebrow">Life score</span><h3>Overall progress</h3></div><strong id="analyticsAverage">—</strong></div>
+            <canvas id="progressChart" height="230"></canvas>
+          </article>
+          <article class="glass-panel chart-card">
+            <div class="card-head"><div><span class="eyebrow">Balance</span><h3>Average check-in</h3></div></div>
+            <div id="balanceBars" class="balance-bars"></div>
+          </article>
+          <article class="glass-panel chart-card">
+            <div class="card-head"><div><span class="eyebrow">Digital</span><h3>Screen time trend</h3></div><strong id="screenAverage">—</strong></div>
+            <canvas id="screenChart" height="210"></canvas>
+          </article>
+          <article class="glass-panel chart-card span-2">
+            <div class="card-head"><div><span class="eyebrow">Consistency</span><h3>Activity heatmap</h3></div><span class="muted" id="heatmapHint"></span></div>
+            <div id="heatmap" class="heatmap"></div>
+          </article>
+          <article class="glass-panel chart-card span-2">
+            <div class="card-head"><div><span class="eyebrow">Signals</span><h3>What your data suggests</h3></div></div>
+            <div id="analyticsInsights" class="insight-grid"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="view-journal">
+        <section class="journal-hero glass-panel">
+          <div><span class="pill soft">Private reflection</span><h2>Be accurate with yourself, not cruel to yourself.</h2><p>Review the day in three short signals.</p></div>
+        </section>
+        <section class="journal-grid">
+          <article class="glass-panel card reflection-card">
+            <div class="card-head"><div><span class="eyebrow">Daily review</span><h3>Self reflection</h3></div><span id="reflectionSaved" class="muted"></span></div>
+            <label class="field-label">What worked?</label>
+            <textarea id="workedText" rows="3" placeholder="One thing you did well..."></textarea>
+            <label class="field-label">What needs correction?</label>
+            <textarea id="improveText" rows="3" placeholder="Be specific, not harsh..."></textarea>
+            <label class="field-label">Tomorrow’s adjustment</label>
+            <textarea id="tomorrowText" rows="3" placeholder="One realistic change..."></textarea>
+            <button class="primary-btn" id="saveReflection">Save reflection</button>
+          </article>
+          <article class="glass-panel card notes-card">
+            <div class="card-head"><div><span class="eyebrow">Personal notes</span><h3>Quick notes</h3></div><button class="mini-btn" id="addNote"><svg><use href="#i-plus"></use></svg>Note</button></div>
+            <div id="notesList" class="notes-list"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="view-settings">
+        <section class="settings-grid">
+          <article class="glass-panel settings-card">
+            <span class="eyebrow">Profile</span><h3>Personalize</h3>
+            <label class="field-label">Name</label><input class="text-input" id="profileName" placeholder="Your name" />
+            <label class="field-label">Daily screen target (hours)</label><input class="text-input" id="screenTarget" type="number" min="0" max="24" step="0.5" />
+            <button class="primary-btn" id="saveSettings">Save settings</button>
+          </article>
+          <article class="glass-panel settings-card">
+            <span class="eyebrow">Data ownership</span><h3>Backup</h3><p class="muted">Your entries stay in this browser unless you export them.</p>
+            <div class="settings-actions">
+              <button class="secondary-btn" id="exportData"><svg><use href="#i-download"></use></svg>Export JSON</button>
+              <button class="secondary-btn" id="importData"><svg><use href="#i-upload"></use></svg>Import backup</button>
+              <input type="file" id="importFile" accept="application/json" hidden />
+            </div>
+          </article>
+          <article class="glass-panel settings-card danger-card">
+            <span class="eyebrow">Reset</span><h3>Clear all data</h3><p class="muted">This cannot be undone unless you have an exported backup.</p>
+            <button class="danger-btn" id="resetData"><svg><use href="#i-trash"></use></svg>Reset LifeGlass</button>
+          </article>
+          <article class="glass-panel settings-card photo-credit-card">
+            <span class="eyebrow">Images</span><h3>Photo credits</h3><p class="muted">Workspace photo by d c, journal photo by Kelly Sikkema, sunrise photo by Vikas Gurjar — sourced from Unsplash.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav glass-panel" aria-label="Mobile navigation">
+    <button class="nav-item active" data-view="today"><svg><use href="#i-home"></use></svg><span>Today</span></button>
+    <button class="nav-item" data-view="goals"><svg><use href="#i-target"></use></svg><span>Goals</span></button>
+    <button class="nav-item" data-view="analytics"><svg><use href="#i-chart"></use></svg><span>Stats</span></button>
+    <button class="nav-item" data-view="journal"><svg><use href="#i-note"></use></svg><span>Journal</span></button>
+    <button class="nav-item" data-view="settings"><svg><use href="#i-settings"></use></svg><span>Settings</span></button>
+  </nav>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal glass-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><span class="eyebrow">Quick add</span><h3 id="modalTitle">Add item</h3></div><button class="close-btn" id="closeModal" aria-label="Close">×</button></div>
+      <form id="modalForm"></form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
