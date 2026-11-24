@@ -1,165 +1,372 @@
+
 <div align="center">
 
-# Life Mirror · LifeGlass
+# 🪞 LifeGlass
 
-**Track your day. Understand your patterns. Improve with intention.**
+### Your Life. Your Data. Your Direction.
 
-An offline-first personal productivity and self-monitoring Android application.
+An offline-first Android application for personal productivity, self-reflection, goal management and data-driven personal growth.
 
-![Android](https://img.shields.io/badge/Android-8.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white) ![Java](https://img.shields.io/badge/Java-Native%20Android-E76F00?style=flat-square) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Gradle](https://img.shields.io/badge/Gradle-9.5.0-02303A?style=flat-square&logo=gradle) ![Offline](https://img.shields.io/badge/Data-Local%20First-64748B?style=flat-square)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 
-[Features](#explore-the-app) · [Architecture](#under-the-hood) · [Build APK](#build-and-install) · [Data](#data-ownership)
+![Offline First](https://img.shields.io/badge/Architecture-Offline_First-14B8A6?style=flat-square)
+![MVC](https://img.shields.io/badge/Pattern-MVC-6366F1?style=flat-square)
+![Theme](https://img.shields.io/badge/Theme-Dark_%7C_Light-8B5CF6?style=flat-square)
+![Privacy](https://img.shields.io/badge/Data-Local_Storage-22C55E?style=flat-square)
+
+[Overview](#overview) • [App Showcase](#app-showcase) • [Architecture](#system-architecture) • [Installation](#installation)
+
+<br>
+
+<img src="./Screenshot_20261125_012644.jpg.jpeg" width="30%" alt="Daily Dashboard">
+<img src="./Screenshot_20261125_012801.jpg.jpeg" width="30%" alt="Goal Management">
+<img src="./Screenshot_20261125_012806.jpg.jpeg" width="30%" alt="Personal Analytics">
+
+<br>
+
+*Focus on direction, not perfection.*
 
 </div>
 
-## A personal feedback loop
+---
 
-LifeGlass brings tasks, goals, daily check-ins, screen-time logs and reflections into one dashboard. Instead of treating productivity as task completion alone, it combines several signals into a personal review.
+## Overview
+
+LifeGlass is a personal productivity and self-analytics application designed to help users understand how they spend their time, manage goals, track daily activities and reflect on their personal growth.
+
+Rather than functioning as a conventional to-do list, LifeGlass connects daily actions, emotional wellbeing, digital habits and long-term objectives into a unified personal monitoring experience.
+
+The application follows an offline-first approach, keeping personal records locally accessible without requiring an external database or cloud account.
+
+---
+
+## App Showcase
+
+### 01 — Daily Dashboard & Activity Tracking
+
+<div align="center">
+
+| Daily Dashboard | Daily Check-in | Digital Balance |
+|:---:|:---:|:---:|
+| <img src="./Screenshot_20261125_012644.jpg.jpeg" width="250"> | <img src="./Screenshot_20261125_012646.jpg.jpeg" width="250"> | <img src="./Screenshot_20261125_012647.jpg.jpeg" width="250"> |
+| Daily performance overview | Mood, satisfaction and energy | Activity and screen-time logging |
+
+</div>
+
+The daily dashboard provides a consolidated view of personal performance through:
+
+- Dynamic daily life score
+- Task creation and completion tracking
+- Overall goal progress
+- Mood, satisfaction and energy check-ins
+- Daily activity logging
+- Manual screen-time tracking
+- Personalized behavioral insights
+
+---
+
+### 02 — Goal Management
+
+<div align="center">
+
+| Goal Dashboard | Interactive Progress Tracking |
+|:---:|:---:|
+| <img src="./Screenshot_20261125_012801.jpg.jpeg" width="280"> | <img src="./Screenshot_20261125_012802.jpg.jpeg" width="280"> |
+
+</div>
+
+Create meaningful goals and monitor their progress through interactive visual controls.
+
+- Custom goal creation
+- Adjustable progress indicators
+- Individual goal completion percentages
+- Aggregated goal progress
+- Dynamic progress visualization
+
+> Build a life you can measure without reducing it to numbers.
+
+---
+
+### 03 — Personal Analytics & Data Visualization
+
+<div align="center">
+
+| Overall Progress | Personal Wellbeing | Activity Heatmap |
+|:---:|:---:|:---:|
+| <img src="./Screenshot_20261125_012806.jpg.jpeg" width="250"> | <img src="./Screenshot_20261125_012808.jpg.jpeg" width="250"> | <img src="./Screenshot_20261125_012809.jpg.jpeg" width="250"> |
+| Performance trends | Wellbeing indicators | Consistency and behavioral signals |
+
+</div>
+
+The analytics module transforms recorded personal activities into meaningful visual insights.
+
+- Weekly, monthly and yearly analytics
+- Life score trend visualization
+- Average mood, satisfaction and energy
+- Screen-time trend analysis
+- Six-month activity consistency heatmap
+- Rule-based behavioral insights
+- Task completion and digital balance analysis
+
+---
+
+### 04 — Digital Journal & Self-Reflection
+
+<div align="center">
+
+| Personal Journal | Structured Daily Reflection |
+|:---:|:---:|
+| <img src="./Screenshot_20261125_012813.jpg.jpeg" width="280"> | <img src="./Screenshot_20261125_012815.jpg.jpeg" width="280"> |
+
+</div>
+
+A dedicated space for reviewing daily experiences and identifying realistic improvements.
+
+The reflection system focuses on three questions:
+
+1. What worked today?
+2. What needs correction?
+3. What adjustment can be made tomorrow?
+
+Users can also maintain personal notes alongside their daily reflections.
+
+> Be accurate with yourself, not cruel to yourself.
+
+---
+
+### 05 — Personalization & Data Ownership
+
+<div align="center">
+
+| Light Mode & Settings | Backup & Data Management |
+|:---:|:---:|
+| <img src="./Screenshot_20261125_012819.jpg.jpeg" width="280"> | <img src="./Screenshot_20261125_012820.jpg.jpeg" width="280"> |
+
+</div>
+
+LifeGlass prioritizes local data ownership and personal customization.
+
+- Dark and light theme switching
+- Personalized user profile
+- Configurable daily screen-time target
+- Local data persistence
+- JSON backup export
+- Backup import and restoration
+- Native Android file picker integration
+- Complete data reset option
+
+---
+
+## Daily Workflow
 
 ```mermaid
 flowchart LR
-    A[Plan tasks and goals] --> B[Log daily activities]
-    B --> C[Check in and reflect]
-    C --> D[Review charts and insights]
-    D --> A
+    A[Plan Your Day] --> B[Track Activities]
+    B --> C[Daily Check-in]
+    C --> D[Review Analytics]
+    D --> E[Self Reflection]
+    E --> F[Adjust Goals]
+    F --> A
+
+    style A fill:#6366f1,color:#fff
+    style B fill:#2563eb,color:#fff
+    style C fill:#0891b2,color:#fff
+    style D fill:#0d9488,color:#fff
+    style E fill:#7c3aed,color:#fff
+    style F fill:#059669,color:#fff
 ```
 
-## Explore the app
+LifeGlass creates a continuous feedback loop between planning, execution, observation and improvement.
 
-| Today | Goals | Analytics |
-| :--- | :--- | :--- |
-| Daily score ring, task list, activity timeline and check-ins | Goal cards, categories and adjustable progress | Progress lines, screen-time trends and activity heatmap |
-| **Journal** | **Settings** | **Appearance** |
-| Daily reflection and quick notes | Profile, screen-time target, JSON backup and restore | Glassmorphism interface with light and dark themes |
+---
 
-### 01 · Daily dashboard
+## Life Score Engine
 
-A single view connects task completion, goals, mood, energy, satisfaction and manually logged screen time. Add tasks, assign priorities and mark them complete; record activities and digital usage by category.
-
-### 02 · Personal analytics
+The application combines multiple personal indicators into a weighted daily performance score.
 
 ```mermaid
 pie showData
-    title Daily score weights
-    "Task completion" : 45
-    "Self-reported wellbeing" : 40
-    "Digital balance" : 15
+    title Daily Life Score Composition
+    "Task Completion" : 45
+    "Personal Wellbeing" : 40
+    "Digital Balance" : 15
 ```
 
-The JavaScript model calculates a weighted daily score and aggregates recorded days across weekly, monthly and yearly views. The dashboard displays charts, check-in averages, activity streaks and rule-based insights. This score is a personal tracking heuristic, not a clinical or validated wellbeing measure.
+| Component | Weight | Purpose |
+|---|:---:|---|
+| Task Completion | 45% | Measures daily task execution |
+| Personal Wellbeing | 40% | Combines mood, energy and satisfaction |
+| Digital Balance | 15% | Evaluates logged screen time against the daily target |
 
-### 03 · Goals and reflection
+The score provides a simplified personal feedback indicator rather than a clinical or psychological assessment.
 
-Set goals, adjust progress and review the day through three prompts: what worked, what could improve, and what to change tomorrow. Quick notes provide space for additional thoughts.
+---
 
-### 04 · Offline and portable
+## System Architecture
 
-```mermaid
-flowchart LR
-    U[Daily entries] --> S[(WebView localStorage)]
-    S --> D[Dashboard and analytics]
-    S --> J[JSON export]
-    J --> P[Android document picker]
-    P --> F[Backup file]
-    F --> I[JSON import]
-    I --> S
-```
-
-All dashboard resources, including photography, are bundled in the APK. No server or internet connection is required for core functionality. Screen time is entered manually; the app does not monitor Android usage automatically.
-
-## Under the hood
+LifeGlass uses a hybrid Android architecture, combining native Android functionality with a lightweight web-based application layer.
 
 ```mermaid
 flowchart TD
-    A[Android MainActivity - Java] --> B[Android WebView]
-    B --> C[Bundled HTML and CSS]
-    B --> D[JavaScript MVC]
-    D --> M[Model - storage, analytics, insight rules]
-    D --> V[View - dashboard and charts]
-    D --> K[Controller - events and actions]
-    K --> N[LifeGlassAndroid bridge]
-    N --> P[Native Android document picker]
-    M --> S[(localStorage)]
+    A[Android Application - Java] --> B[Android WebView]
+    B --> C[HTML / CSS / JavaScript]
+
+    C --> D[Controller Layer]
+    D --> E[Model Layer]
+    D --> F[View Layer]
+
+    E --> G[Local Storage]
+    E --> H[Analytics Engine]
+
+    F --> I[Dashboard]
+    F --> J[Goals]
+    F --> K[Journal]
+    F --> L[Statistics]
+
+    C --> M[Android JavaScript Bridge]
+    M --> N[Native File Picker]
+    N --> O[JSON Backup and Restore]
+
+    style A fill:#059669,color:#fff
+    style B fill:#2563eb,color:#fff
+    style C fill:#6366f1,color:#fff
+    style H fill:#0d9488,color:#fff
+    style G fill:#7c3aed,color:#fff
+    style O fill:#0891b2,color:#fff
 ```
 
-| Layer | Implementation |
-| --- | --- |
-| Native shell | Java, Android SDK, WebView |
-| Interface | HTML5, CSS3, JavaScript, Canvas charts, inline SVG icons |
-| Application logic | Model, View, Controller and rule-based InsightEngine |
-| Persistence | localStorage and JSON import/export |
-| Build | Gradle and GitHub Actions |
+### MVC Architecture
 
-## Build and install
+| Layer | Responsibility |
+|---|---|
+| Model | Data management, persistence and calculations |
+| View | Interface rendering and data visualization |
+| Controller | User interactions and application state |
+| Native Android Layer | WebView integration and native file operations |
 
-**Requirements:** Android Studio with compatible Gradle/JDK tooling, Android SDK 36. Minimum device version: Android 8.0 (API 26). The repository specifies Android Gradle Plugin 9.3.0, Gradle 9.5.0 in CI, and SDK 36.
+---
 
-1. Open the repository folder in Android Studio and sync Gradle.
-2. Install the required SDK if prompted.
-3. Build a debug APK using Android Studio or a compatible installed Gradle distribution:
+## Engineering Decisions
+
+### Offline-First Architecture
+
+Personal records are stored locally instead of depending on a remote server. Core functionality does not require continuous internet access or user authentication.
+
+### Native Android Integration
+
+The application combines a Java-based Android layer with an interactive web interface through Android WebView and a JavaScript bridge.
+
+### Data-Driven Personal Insights
+
+Logged activities and daily check-ins are processed into performance scores, statistical summaries, trend charts and consistency visualizations.
+
+### Privacy-Oriented Data Management
+
+Users control their personal records through local persistence and portable JSON backups.
+
+### Lightweight Application Design
+
+The interface is built using core web technologies, avoiding the overhead of large frontend frameworks.
+
+---
+
+## Technology Stack
+
+| Technology | Application |
+|---|---|
+| Java | Native Android application |
+| Android SDK | Android platform integration |
+| Android WebView | Hybrid application rendering |
+| JavaScript | Application logic and analytics |
+| HTML5 | Interface structure |
+| CSS3 | Responsive styling and glassmorphism |
+| Local Storage | Offline data persistence |
+| JSON | Backup and data portability |
+| Gradle | Android build management |
+| GitHub Actions | Automated APK build workflow |
+
+---
+
+## Installation
+
+### Option 1 — Android APK
+
+If an APK is available under the repository's Releases or GitHub Actions artifacts:
+
+1. Download the APK.
+2. Allow installation from the relevant source in Android settings.
+3. Install LifeGlass.
+4. Launch the application and personalize your profile.
+
+### Option 2 — Build from Source
+
+Clone the repository:
 
 ```bash
-gradle assembleDebug
+git clone https://github.com/arafat-rahman-lisan/Life_Mirror.git
 ```
 
-APK output: `app/build/outputs/apk/debug/app-debug.apk`.
+Open the project in Android Studio.
 
-### GitHub Actions
+- Configure the Android SDK.
+- Synchronize Gradle dependencies.
+- Connect an Android device or launch an emulator.
+- Build and run the application.
+
+---
+
+## Automated Build Workflow
 
 ```mermaid
 flowchart LR
-    A[Push or manual workflow] --> B[Set up Java and Android SDK]
-    B --> C[Gradle assembleDebug]
-    C --> D[Upload APK artifact]
+    A[Source Code] --> B[GitHub Actions]
+    B --> C[Java and Android SDK Setup]
+    C --> D[Gradle Build]
+    D --> E[APK Artifact]
+    E --> F[Android Installation]
 ```
 
-Open **Actions → Build Android APK → Run workflow** and download `LifeGlass-debug-apk` after a successful build. The workflow is included in the source; this documentation does not assert that the current build has been tested.
+The repository includes a GitHub Actions workflow for automated Android APK generation.
 
-### Preview the web interface
+---
 
-From the repository root:
+## Future Development
 
-```bash
-python -m http.server 8000 --directory app/src/main/assets/lifeglass
-```
+- Automatic Android screen-time integration
+- Reminder and notification system
+- Advanced habit correlation analysis
+- Optional encrypted backup
+- Home screen widgets
+- Enhanced accessibility
+- Optional cross-device synchronization
 
-Visit `http://localhost:8000`. Browser preview does not exercise the native Android bridge.
+These features represent potential future improvements rather than existing functionality.
 
-## Project structure
+---
 
-```text
-Life_Mirror/
-├── .github/workflows/build-apk.yml
-├── app/
-│   ├── build.gradle
-│   └── src/main/
-│       ├── AndroidManifest.xml
-│       ├── java/com/lifeglass/tracker/MainActivity.java
-│       ├── assets/lifeglass/
-│       │   ├── index.html
-│       │   ├── css/styles.css
-│       │   ├── img/
-│       │   └── js/
-│       │       ├── app.js
-│       │       ├── model.js
-│       │       ├── view.js
-│       │       └── controller.js
-│       └── res/
-├── build.gradle
-├── gradle.properties
-└── settings.gradle
-```
+## Developer
 
-## Data ownership
+**Arafat Rahman**
 
-The app stores records locally in Android WebView. Clearing app storage or uninstalling may remove records. Export JSON periodically and keep it somewhere safe. First launch includes 13 days of demonstration history and sample goals; these are not real user measurements. Reset restores the default demonstration data.
+Computer Science & Engineering
 
-Photo credits: d c (workspace), Kelly Sikkema (journal), Vikas Gurjar (sunrise), sourced from Unsplash.
+GitHub: [arafat-rahman-lisan](https://github.com/arafat-rahman-lisan)
 
 ---
 
 <div align="center">
 
-**LifeGlass — A clearer view of everyday progress.**
+## LifeGlass
+
+### Track. Reflect. Understand. Improve.
+
+*Personal growth begins with personal awareness.*
+
+If you find this project interesting, consider giving the repository a ⭐
 
 </div>
